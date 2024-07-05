@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var swiper = new Swiper(".sec_2_swiper_wrap", {
+                slidesPerView: "auto",
+                spaceBetween: 12
+            });
+
+            var swiper = new Swiper(".sec_3_swiper", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+            });
+
+            var swiper = new Swiper(".sec_4_swiper", {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                },
+            });
+
+            var swiper = new Swiper(".sec_6_swiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                // loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }
+            });
+
+            $('.sec_3_menu>li').each(function(data_i){
+
+                $(this).attr({
+                    'data_index':data_i
+                });
+
+            });
+
+            $('.sec_3_menu>li').click(function(){
+
+                var num = $(this).attr('data_index');
+                console.log(num);
+
+                $('.sec_3_menu>li').removeClass('sec_3_menu_act');
+                $('.sec_3_menu>li').eq(num).addClass("sec_3_menu_act");
+
+                if(num==1){
+                    $(".sec_3_img_1>img").attr('src','img/sec_3_img_2_1.png');
+                    $(".sec_3_img_2>img").attr('src','img/sec_3_img_2_2.png');
+                    $(".sec_3_img_3>img").attr('src','img/sec_3_img_2_3.png');
+                    $(".sec_3_img_4>img").attr('src','img/sec_3_img_2_4.png');
+                    $(".sec_3_img_5>img").attr('src','img/sec_3_img_2_5.png');
+
+                    $('.sec_3_out_1>h3').html('Bliss Swimsuit-Blue ');
+                    $('.sec_3_out_2>h3').html('Luv Satin Vest-Black ');
+                    $('.sec_3_out_3>h3').html('Bliss Swimsuit-Navy ');
+                    $('.sec_3_out_4>h3').html('Bliss Swimsuit-Pink ');
+                    $('.sec_3_out_5>h3').html('Luv Satin Vest-White ');
+
+                    $('.sec_3_in_1>h4').html('79,000 <span>won</span>');
+                    $('.sec_3_in_2>h4').html('69,000 <span>won</span>');
+                    $('.sec_3_in_3>h4').html('79,000 <span>won</span>');
+                    $('.sec_3_in_4>h4').html('79,000 <span>won</span>');
+                    $('.sec_3_in_5>h4').html('69,000 <span>won</span>');
+
+                    $('.sec_3_in_1>h3').html('67,100 <span>won</span>');
+                    $('.sec_3_in_2>h3').html('58,600 <span>won</span>');
+                    $('.sec_3_in_3>h3').html('67,100 <span>won</span>');
+                    $('.sec_3_in_4>h3').html('67,100 <span>won</span>');
+                    $('.sec_3_in_5>h3').html('58,600 <span>won</span>');
+                }else if(num==2){
+                    $(".sec_3_img_1>img").attr('src','img/sec_3_img_3_1.png');
+                    $(".sec_3_img_2>img").attr('src','img/sec_3_img_3_2.png');
+                    $(".sec_3_img_3>img").attr('src','img/sec_3_img_3_3.png');
+                    $(".sec_3_img_4>img").attr('src','img/sec_3_img_3_4.png');
+                    $(".sec_3_img_5>img").attr('src','img/sec_3_img_3_5.png');
+
+                    $('.sec_3_out_1>h3').html('Pretties Check Pleats Skirt-Beige ');
+                    $('.sec_3_out_2>h3').html('Pretties Check Pleats Skirt-Blue ');
+                    $('.sec_3_out_3>h3').html('George Lace Shorts-Cream ');
+                    $('.sec_3_out_4>h3').html('George Lace Shorts-Red ');
+                    $('.sec_3_out_5>h3').html('Rachel Pearl Shorts-Light Blue ');
+
+                    $('.sec_3_in_1>h4').html('79,000 <span>won</span>');
+                    $('.sec_3_in_2>h4').html('79,000 <span>won</span>');
+                    $('.sec_3_in_3>h4').html('44,000 <span>won</span>');
+                    $('.sec_3_in_4>h4').html('44,000 <span>won</span>');
+                    $('.sec_3_in_5>h4').html('69,000 <span>won</span>');
+
+                    $('.sec_3_in_1>h3').html('67,100 <span>won</span>');
+                    $('.sec_3_in_2>h3').html('67,100 <span>won</span>');
+                    $('.sec_3_in_3>h3').html('39,600 <span>won</span>');
+                    $('.sec_3_in_4>h3').html('39,600 <span>won</span>');
+                    $('.sec_3_in_5>h3').html('58,600 <span>won</span>');
+                }else if(num==3){
+                    $(".sec_3_img_1>img").attr('src','img/sec_3_img_4_1.png');
+                    $(".sec_3_img_2>img").attr('src','img/sec_3_img_4_2.png');
+                    $(".sec_3_img_3>img").attr('src','img/sec_3_img_4_3.png');
+                    $(".sec_3_img_4>img").attr('src','img/sec_3_img_4_4.png');
+                    $(".sec_3_img_5>img").attr('src','img/sec_3_img_4_5.png');
+
+                    $('.sec_3_out_1>h3').html('Blair Tweed One-Piece-Black ');
+                    $('.sec_3_out_2>h3').html('Blair Tweed One-Piece-Pink ');
+                    $('.sec_3_out_3>h3').html('Blair Tweed One-Piece-Yellow ');
+                    $('.sec_3_out_4>h3').html('Mia boatneck one-piece-Black ');
+                    $('.sec_3_out_5>h3').html('Mia boatneck one-piece-Yellow ');
+
+                    $('.sec_3_in_1>h4').html('88,000 <span>won</span>');
+                    $('.sec_3_in_2>h4').html('88,000 <span>won</span>');
+                    $('.sec_3_in_3>h4').html('88,000 <span>won</span>');
+                    $('.sec_3_in_4>h4').html('84,000 <span>won</span>');
+                    $('.sec_3_in_5>h4').html('84,000 <span>won</span>');
+
+                    $('.sec_3_in_1>h3').html('74,800 <span>won</span>');
+                    $('.sec_3_in_2>h3').html('74,800 <span>won</span>');
+                    $('.sec_3_in_3>h3').html('74,800 <span>won</span>');
+                    $('.sec_3_in_4>h3').html('71,400 <span>won</span>');
+                    $('.sec_3_in_5>h3').html('71,400 <span>won</span>');
+                }else if(num==4){
+                    $(".sec_3_img_1>img").attr('src','img/sec_3_img_5_1.png');
+                    $(".sec_3_img_2>img").attr('src','img/sec_3_img_5_2.png');
+                    $(".sec_3_img_3>img").attr('src','img/sec_3_img_5_3.png');
+                    $(".sec_3_img_4>img").attr('src','img/sec_3_img_5_4.png');
+                    $(".sec_3_img_5>img").attr('src','img/sec_3_img_5_5.png');
+
+                    $('.sec_3_out_1>h3').html('Glossy Coin Pocket-Light Blue ');
+                    $('.sec_3_out_2>h3').html('Sports Line Ball Cap-Beige ');
+                    $('.sec_3_out_3>h3').html('BT paris cap-Pink ');
+                    $('.sec_3_out_4>h3').html('BT paris cap-Navy ');
+                    $('.sec_3_out_5>h3').html('BT paris cap-Green ');
+
+                    $('.sec_3_in_1>h4').html('33,000 <span>won</span>');
+                    $('.sec_3_in_2>h4').html('39,000 <span>won</span>');
+                    $('.sec_3_in_3>h4').html('43,000 <span>won</span>');
+                    $('.sec_3_in_4>h4').html('43,000 <span>won</span>');
+                    $('.sec_3_in_5>h4').html('43,000 <span>won</span>');
+
+                    $('.sec_3_in_1>h3').html('29,700 <span>won</span>');
+                    $('.sec_3_in_2>h3').html('35,100 <span>won</span>');
+                    $('.sec_3_in_3>h3').html('38,700 <span>won</span>');
+                    $('.sec_3_in_4>h3').html('38,700 <span>won</span>');
+                    $('.sec_3_in_5>h3').html('38,700 <span>won</span>');
+                }else if(num==0){
+                    $(".sec_3_img_1>img").attr('src','img/sec_3_img_1_1.png');
+                    $(".sec_3_img_2>img").attr('src','img/sec_3_img_1_2.png');
+                    $(".sec_3_img_3>img").attr('src','img/sec_3_img_1_3.png');
+                    $(".sec_3_img_4>img").attr('src','img/sec_3_img_1_4.png');
+                    $(".sec_3_img_5>img").attr('src','img/sec_3_img_1_5.png');
+
+                    $('.sec_3_out_1>h3').html('Lake Nylon Shirring Jacket-Pink');
+                    $('.sec_3_out_2>h3').html('Lake Nylon Shirring Jacket-Grey ');
+                    $('.sec_3_out_3>h3').html('Lake Nylon Shirring Jacket-Black ');
+                    $('.sec_3_out_4>h3').html('Ripple Wind Breaker Jacket-Ivory');
+                    $('.sec_3_out_5>h3').html('Ripple Wind Breaker Jacket-Beige ');
+
+                    $('.sec_3_in_1>h4').html('89,000 <span>won</span>');
+                    $('.sec_3_in_2>h4').html('89,000 <span>won</span>');
+                    $('.sec_3_in_3>h4').html('89,000 <span>won</span>');
+                    $('.sec_3_in_4>h4').html('69,000 <span>won</span>');
+                    $('.sec_3_in_5>h4').html('69,000 <span>won</span>');
+
+                    $('.sec_3_in_1>h3').html('80,100 <span>won</span>');
+                    $('.sec_3_in_2>h3').html('80,100 <span>won</span>');
+                    $('.sec_3_in_3>h3').html('80,100 <span>won</span>');
+                    $('.sec_3_in_4>h3').html('62,100 <span>won</span>');
+                    $('.sec_3_in_5>h3').html('62,100 <span>won</span>');
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    
+    <section class="top_banner">
+        <p><i>🏆BITTER BLACK FRIDAY & TIME-SALE⚡</i></p>
+    </section>
+
+    <header>
+        <div class="ham_wrap">
+            <div class="ham">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <ul class="head_left head_menu">
+            <li><a href="#">OUTER</a></li>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">BOTTOM</a></li>
+            <li><a href="#">DRESS</a></li>
+            <li><a href="#">ACC</a></li>
+        </ul>
+        <div class="head_logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <ul class="head_right head_menu">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Cart(0)</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+
+        <div class="none_box"></div>
+    </header>
+
+    <section class="main">
+        <div class="main_img"></div>
+    </section>
+
+    <section class="sec_1">
+        <h4><i>Bitter Cells</i></h4>
+        <p>Feel The Bitter Cells In you!💕<br>
+            정신과 육체, 어떤 부분에서든 좋아하는 것을 할 때의 두근 거리는 감정을<br>
+            격렬한 세포에 빗대어 표현한 브랜드 입니다⚡💘</p>
+        <p>정신과 육체, 어떤 부분에서든<br>
+            좋아하는 것을  할 때의 두근 거리는 감정을<br>
+            격렬한 세포에 빗대어 표현한 <br>브랜드 입니다⚡💘</p>
+    </section>
+
+    <section class="sec_2">
+        <h3><i>❤️Best❤️</i></h3>
+        <div class="swiper sec_2_swiper_wrap">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_1.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Natural Overfit Shirt-Cobalt Blue </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>54,000 <span>won</span></h4>
+                            <h3>51,300 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_2.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Wind Stripe Shirt-Blue </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>54,000 <span>won</span></h4>
+                            <h3>51,300 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_3.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Bambi_Friends Tee-White </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>39,000 <span>won</span></h4>
+                            <h3>35,100 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_4.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Heart Balloon Sweat Shirt-Red </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>56,000 <span>won</span></h4>
+                            <h3>49,800 <span>won</span>n</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_5.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Ballet Sleeveless-Black </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>33,000 <span>won</span></h4>
+                            <h3>29,700 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_6.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Layered Coloring Tee-Black </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>39,000 <span>won</span></h4>
+                            <h3>35,100 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_7.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Annie Overfit Shirt-Pink </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>54,000 <span>won</span></h4>
+                            <h3>51,300 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sec_2_img">
+                        <img src="img/sec_2_img_8.png" alt="content">
+                    </div>
+                    <div class="sec_2_text_wrap sec_2_text_out">
+                        <h3>Rabbit Sweat Shirt-Ivory </h3>
+                        <div class="sec_2_text_wrap sec_2_text_in">
+                            <h4>59,000 <span>won</span></h4>
+                            <h3>47,200 <span>won</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec_3">
+        <h3><i>⚡New⚡</i></h3>
+        <ul class="sec_3_menu">
+            <li class="sec_3_menu_act">OUTER</li>
+            <li>TOP</li>
+            <li>BOTTOM</li>
+            <li>DRESS</li>
+            <li>ACC</li>
+        </ul>
+
+        <div class="swiper sec_3_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="sec_3_img_1 sec_3_img">
+                    <img src="img/sec_3_img_1_1.png" alt="content">
+                </div>
+                <div class="sec_2_text_wrap sec_2_text_out sec_3_out_1">
+                    <h3>Lake Nylon Shirring Jacket-Pink </h3>
+                    <div class="sec_2_text_wrap sec_2_text_in sec_3_in_1">
+                        <h4>89,000 <span>won</span></h4>
+                        <h3>80,100 <span>won</span></h3>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="sec_3_img_2 sec_3_img">
+                    <img src="img/sec_3_img_1_2.png" alt="content">
+                </div>
+                <div class="sec_2_text_wrap sec_2_text_out sec_3_out_2">
+                    <h3>Lake Nylon Shirring Jacket-Grey </h3>
+                    <div class="sec_2_text_wrap sec_2_text_in sec_3_in_2">
+                        <h4>89,000 <span>won</span></h4>
+                        <h3>80,100 <span>won</span></h3>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="sec_3_img_3 sec_3_img">
+                    <img src="img/sec_3_img_1_3.png" alt="content">
+                </div>
+                <div class="sec_2_text_wrap sec_2_text_out sec_3_out_3">
+                    <h3>Lake Nylon Shirring Jacket-Black </h3>
+                    <div class="sec_2_text_wrap sec_2_text_in sec_3_in_3">
+                        <h4>89,000 <span>won</span></h4>
+                        <h3>80,100 <span>won</span></h3>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="sec_3_img_4 sec_3_img">
+                    <img src="img/sec_3_img_1_4.png" alt="content">
+                </div>
+                <div class="sec_2_text_wrap sec_2_text_out sec_3_out_4">
+                    <h3>Ripple Wind Breaker Jacket-Ivory </h3>
+                    <div class="sec_2_text_wrap sec_2_text_in sec_3_in_4">
+                        <h4>69,000 <span>won</span></h4>
+                        <h3>62,100 <span>won</span></h3>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide sec_3_swiper_end">
+                <div class="sec_3_img_5 sec_3_img">
+                    <img src="img/sec_3_img_1_5.png" alt="content">
+                </div>
+                <div class="sec_2_text_wrap sec_2_text_out sec_3_out_5">
+                    <h3>Ripple Wind Breaker Jacket-Beige </h3>
+                    <div class="sec_2_text_wrap sec_2_text_in sec_3_in_5">
+                        <h4>69,000 <span>won</span></h4>
+                        <h3>62,100 <span>won</span></h3>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec_3_btn">
+            <div class="sec_3_btn_move"></div>
+            <h2>MORE</h2>
+        </div>
+
+
+
+    </section>
+
+    <section class="sec_4">
+        <div class="sec_4_main">
+            <h3><i>💖I LOVE ALL THAT💖</i></h3>
+            <img src="img/sec_4_main.png" alt="content">
+            <h4>Like a Movie (Star)🎬</h4>
+        </div>
+        <div class="sec_4_con_wrap">
+            <h3><i>I LOVE ALL THAT💖</i></h3>
+
+            <div class="swiper sec_4_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/sec_4_img_1.png" alt="content">
+                        <div class="sec_2_text_wrap sec_2_text_out sec_4_out_1">
+                            <h3>Flat Peach Tee-Sky Blue </h3>
+                            <div class="sec_2_text_wrap sec_2_text_in sec_4_in_1">
+                                <h4>39,000 <span>won</span></h4>
+                                <h3>37,000 <span>won</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sec_4_img_2.png" alt="content">
+                        <div class="sec_2_text_wrap sec_2_text_out sec_4_out_1">
+                            <h3>Ripple Wind Breaker Jacket-Beige </h3>
+                            <div class="sec_2_text_wrap sec_2_text_in sec_4_in_1">
+                                <h4>69,000 <span>won</span></h4>
+                                <h3>62,100 <span>won</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sec_4_img_3.png" alt="content">
+                        <div class="sec_2_text_wrap sec_2_text_out sec_4_out_1">
+                            <h3>Mind Square Knit-Khaki </h3>
+                            <div class="sec_2_text_wrap sec_2_text_in sec_4_in_1">
+                                <h4>49,000 <span>won</span></h4>
+                                <h3>46,500 <span>won</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sec_4_img_4.png" alt="content">
+                        <div class="sec_2_text_wrap sec_2_text_out sec_4_out_1">
+                            <h3>Blaze Candle Tee-Black </h3>
+                            <div class="sec_2_text_wrap sec_2_text_in sec_4_in_1">
+                                <h4>39,000 <span>won</span></h4>
+                                <h3>35,100 <span>won</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sec_4_img_5.png" alt="content">
+                        <div class="sec_2_text_wrap sec_2_text_out sec_4_out_1">
+                            <h3>Misty Shirring Mesh Tee-Black </h3>
+                            <div class="sec_2_text_wrap sec_2_text_in sec_4_in_1">
+                                <h4>49,000 <span>won</span></h4>
+                                <h3>44,100 <span>won</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/sec_4_img_6.png" alt="content">
+                        <div class="sec_2_text_wrap sec_2_text_out sec_4_out_1">
+                            <h3>Peach Check Sleeveless-Black </h3>
+                            <div class="sec_2_text_wrap sec_2_text_in sec_4_in_1">
+                                <h4>33,000 <span>won</span></h4>
+                                <h3>31,300 <span>won</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec_4_scroll_wrap">
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sec_5">
+        <a href="#"></a>
+    </section>
+
+    <section class="sec_6">
+        <h3><i>Review</i></h3>
+        <ul class="sec_6_con_wrap">
+            <li>
+                <img src="img/sec_6_img_1.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>넘 예뻐용 ㅎㅎ</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>제**</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_1.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Glossy Crop Puffer Jacket-Silver </h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 4.8</h3>
+                            <h3>리뷰 9건</h3>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="img/sec_6_img_2.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>빈티지 낭낭</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>Jyunn**</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_2.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Santana Berry Tee-White </h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 5.0</h3>
+                            <h3>리뷰 1건</h3>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="img/sec_6_img_3.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>재질도 좋고 하트 패치가 너무 귀여워요!!</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>서**</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_3.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Bella Logo Tee-Grey </h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 5.0</h3>
+                            <h3>리뷰 1건</h3>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="img/sec_6_img_4.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>사이즈도 색감도 다 만족이요!</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>N페이 구매자</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_4.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Natural Overfit Shirt-Cobalt Blue</h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 5.0</h3>
+                            <h3>리뷰 2건</h3>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="swiper sec_6_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/sec_6_img_1.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>넘 예뻐용 ㅎㅎ</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>제**</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_1.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Glossy Crop Puffer Jacket-Silver </h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 4.8</h3>
+                            <h3>리뷰 9건</h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/sec_6_img_2.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>빈티지 낭낭</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>Jyunn**</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_2.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Santana Berry Tee-White </h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 5.0</h3>
+                            <h3>리뷰 1건</h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/sec_6_img_3.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>재질도 좋고 하트 패치가 너무 귀여워요!!</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>서**</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_3.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Bella Logo Tee-Grey </h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 5.0</h3>
+                            <h3>리뷰 1건</h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/sec_6_img_4.png" alt="review">
+                <div class="sec_6_con_top">
+                    <div class="sec_6_top_left">
+                        <h2>⭐⭐⭐⭐⭐</h2>
+                        <h3>사이즈도 색감도 다 만족이요!</h3>
+                    </div>
+                    <div class="sec_6_top_right">
+                        <h3>N페이 구매자</h3>
+                    </div>
+                </div>
+                <div class="sec_6_con_bottom">
+                    <img src="img/sec_6_con_4.png" alt="review">
+                    <div class="sec_6_bottom_wrap">
+                        <h3>Natural Overfit Shirt-Cobalt Blue</h3>
+                        <div class="sec_6_bottom_bot">
+                            <h3>평점 5.0</h3>
+                            <h3>리뷰 2건</h3>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+        <div class="footer_wrap">
+            <h2 class="footer_logo"><a href="#">BITTER<br>
+                CELLS</a></h2>
+            <div class="footer_left">
+                <p>WONDERWALL Co.,ltd <span>Jeon Young Min</span></p>
+                <p>ADDRESS : <span>8F, 220, Dasan-ro, Jung-gu, Seoul, <br><span>Republic of Korea</span></span></p>
+                <p>E.MAIL : <span>bittercells.cs@gmail.com</span></p>
+                <p>BUSINESS REGISTRATION NO : 701-86-02707</p>
+                <p>E-COMMERCE PERMIT : 제 2023-서울중구-1421 호</p>
+            </div>
+            <div class="footer_right">
+                <div class="fot_right_gnb">
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Guide</a></p>
+                    <p><a href="#">Privacy</a></p>
+                    <p><a href="#">Agreement</a></p>
+                </div>
+                <p><span>Customer Center : 02-6238-4323</span></p>
+                <p><span>11:00-17:00 (Lunch Time 12:30-13:40)</span></p>
+                <p>기업017-116195-04-011</p>
+                <p>Copyright ©Wonderwall co., Ltd. All rights reserved. Hosting by cafe24. Designed by moen.</p>
+            </div>
+        </div>
+
+        <div class="footer_part">
+            <h2 class="footer_logo"><a href="#">BITTER<br>
+                CELLS</a></h2>
+            <div class="fot_right_gnb">
+                <p><a href="#">Agreement</a></p>
+                <p><a href="#">Privacy</a></p>
+                <p><a href="#">Guide</a></p>
+                <p><a href="#">Instagramt</a></p>
+            </div>
+            <p><span>Customer Center : 02-6238-4323</span></p>
+            <p><span>11:00-17:00 (Lunch Time 12:30-13:40)</span></p>
+            <p>기업017-116195-04-011</p>
+            <p>WONDERWALL Co.,ltd <span>Jeon Young Min</span></p>
+            <p>ADDRESS : <span>8F, 220, Dasan-ro, Jung-gu, Seoul, Republic of Korea</span></p>
+            <p>E.MAIL : <span>bittercells.cs@gmail.com</span></p>
+            <p>BUSINESS REGISTRATION NO : 701-86-02707</p>
+            <p>E-COMMERCE PERMIT : 제 2023-서울중구-1421 호</p>
+            <p>Copyright ©Wonderwall co., Ltd. All rights reserved.<br>
+                Hosting by cafe24. Designed by moen.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
